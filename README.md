@@ -109,7 +109,7 @@ We welcome suggestions for improvements! Use the `/suggestion` command in Discor
 
 ## Creator
 
-Made by Sam (techcodes27) for [The Apple Den](https://discord.gg/appleden)
+Made by Sam (techcodes27)
 
 
 ## License
