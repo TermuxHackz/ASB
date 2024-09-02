@@ -77,8 +77,9 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 - `/upgrade_limit [new_limit]`: Upgrade the server's question limit (10-20).
 
 ## Required Roles
-- Most admin commands require one of the following roles: Senior Mod, Manager, Admin, or Server Owner.
+- Most admin commands require one of the following roles: Senior Mod, Manager, Admin, or Server Owner.(case sensitive)
 - The `/apple_support` command is restricted to users with Senior Mod or higher roles.
+- **PLEASE MAKE SURE THE TEAM MANAGING YOUR SERVER HAS THESE ROLES< IF YOU DONT< KINDLY CREATE THEM AND ALSO A GENIUS BAR SPECIALIST ROLE AND GENIUS BAR MASTER ROLE THAT WOULD ASSIT HUMANLY.**
 
 ## Upgrade System
 - Servers can upgrade to increase their question limit and access premium features.
