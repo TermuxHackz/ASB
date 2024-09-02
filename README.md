@@ -1,121 +1,105 @@
 # Apple Support AI Bot
 
-## Introduction
+## Author
+Created by @Sam (techcodes27)
 
+GitHub: [https://github.com/TermuxHackz](https://github.com/TermuxHackz)
+
+## Description
 The Apple Support AI Bot is a sophisticated Discord bot designed to provide high-quality, automated support for Apple products and services within Discord servers. It serves as an efficient first line of support for Apple-related queries in Discord communities, potentially reducing the workload on human moderators while providing quick and accurate assistance to users.
 
 ## Features
 
-- AI-powered responses to Apple-related questions
-- Support for multiple languages
-- Configurable question limits per user
-- Integration with up to two forum channels per server
-- Role-based access control for administrative commands
-- Suggestion system for user feedback
-- Ban/unban system for user management
-- Customizable maximum question limit
+### 1. Apple Support Q&A
+- Users can ask questions about Apple products and services in designated forum channels.
+- The bot uses advanced AI models to generate helpful and accurate responses.
+- Daily question limits are enforced to prevent abuse.
 
-## Setup
+### 2. Multi-Language Support
+- The bot can translate responses to various languages set for individual users.
 
-1. Invite the bot to your Discord server using the provided invite link.
-2. Ensure the bot has the necessary permissions (Managing Channels, Viewing Channels, Send Messages, Read Message History, etc.).
-3. Create the required roles in your server: Senior Mod, Manager, Admin, Server Owner.
-4. Use the `/configure_forum` command to set up the support forum(s).
+### 3. Configurable Forums
+- Admins can configure up to two forum channels for Apple support.
+- The bot will only respond to questions in these designated forums.
+
+### 4. User Management
+- Ban/unban users from using the bot.
+- Set language preferences for individual users.
+
+### 5. Question Limits
+- Default free limit of 5 questions per user per day.
+- Upgradable limit for premium servers.
+
+### 6. Server Upgrades
+- Paid upgrades to increase question limits and access premium features.
+- Stripe integration for secure payments.
+
+### 7. Multiple AI Models
+- Access to various AI models including Claude, LLaMA, and Gemini.
+- Model selection available for upgraded servers.
+
+### 8. Feedback System
+- Users can submit suggestions and feedback to the bot owner.
+- Limited to 2 suggestions per user per day per server.
+
+### 9. Admin Commands
+- Reset all user question limits.
+- Set maximum questions for the server.
+- View banned users.
+
+### 10. Monitoring
+- Uptime tracking and status checking.
+
+## Commands
+
+### General Commands
+- `/apple_support [question]`: Ask a question about Apple products or services.
+- `/about`: Get information about the bot.
+- `/ping`: Check if the bot is running.
+- `/uptime`: See how long the bot has been online.
+- `/check_limit`: Check your remaining questions and server limit.
+- `/suggestion [suggestion]`: Send feedback to the bot owner.
+
+### Admin Commands
+- `/configure_forum forum1:[ForumChannel] [forum2:[ForumChannel]]`: Set up to two forum channels for Apple support.
+- `/remove_forum [forum]`: Remove a configured forum channel.
+- `/getconfigforum`: View currently configured forum channels.
+- `/setgeneralchannel [channel]`: Set the general channel for bot announcements.
+- `/setmaxquestions [max_questions]`: Set the maximum number of questions per user (1-6 for free servers).
+- `/reset_all_limits`: Reset all user question limits to 0.
+- `/setlanguage [user] [language]`: Set the language for a specific user.
+- `/ban [user] [duration]`: Ban a user from using the bot.
+- `/unban [user]`: Unban a user.
+- `/viewbans`: View all currently banned users.
+
+### Premium Commands (Upgraded Servers Only)
+- `/choose_model`: Select the AI model for the bot to use.
+- `/upgrade_limit [new_limit]`: Upgrade the server's question limit (10-20).
 
 ## Required Roles
+- Most admin commands require one of the following roles: Senior Mod, Manager, Admin, or Server Owner.
+- The `/apple_support` command is restricted to users with Senior Mod or higher roles.
 
-The bot uses a role-based permission system. The following roles are recognized:
+## Upgrade System
+- Servers can upgrade to increase their question limit and access premium features.
+- The upgrade costs $10.00 and provides:
+  1. Increased question limit (10-20 questions per user per day).
+  2. Ability to change AI models.
+  3. Unlimited use of the reset_all_limits command.
+- Payment is processed securely through Stripe.
 
-- Senior Mod
-- Manager
-- Admin
-- Server Owner
+## AI Models
+- Default model: Claude 3 Sonnet (FREE)
+- Premium models (available after upgrade):
+  - Claude 3 Opus
+  - LLaMA 3 Sonar Large
+  - Google's Gemini
 
-Users with these roles will have access to administrative commands.
+## Installation and Setup
+1. Invite the bot to your server using the provided OAuth2 link.
+2. Use `/configure_forum` to set up the support forums.
+3. Use `/setgeneralchannel` to set the announcement channel.
+4. Optionally, upgrade your server using `/upgrade_limit` for premium features.
 
-## Configuration
-
-### Setting Up Forums
-
-Use the `/configure_forum` command to set up one or two forum channels for the bot to operate in:
-
-```
-/configure_forum forum1:<ForumChannel> [forum2:<ForumChannel>]
-```
-
-### Setting the General Channel
-
-Set a general channel for bot announcements (Server Owner only):
-
-```
-/setgeneralchannel channel:<TextChannel>
-```
-
-### Setting Maximum Questions
-
-Set the maximum number of questions a user can ask in 24 hours (0-6, default is 5):
-
-```
-/setmaxquestions max_questions:<int>
-```
-
-## Usage
-
-Users can ask Apple-related questions in the configured forum channels. The bot will respond with AI-generated answers based on its trained knowledge of Apple products and services.
-
-### User Commands
-
-- `/about`: Get information about the bot
-- `/ping`: Check if the bot is online
-- `/suggestion`: Submit a suggestion or feedback (limit 2 per day)
-
-### Administrative Commands
-
-- `/apple_support`: Manually ask a question (Senior Mods and above)
-- `/ban`: Ban a user from using the bot
-- `/unban`: Unban a user
-- `/viewbans`: View currently banned users
-- `/setlanguage`: Set a user's preferred language
-- `/getconfigforum`: View configured forums
-- `/remove_forum`: Remove a configured forum
-- `/setmaxquestions`: Set the maximum questions per user
-- `/viewsuggestions`: View user suggestions (Bot Owner only)
-- `/reset_all_limits:`: Reset all user question limits to 0 (Senior Mods and above only)
-
-## Language Support
-
-The bot supports multiple languages. Use the `/setlanguage` command to set a user's preferred language:
-
-```
-/setlanguage user:<User> language:<LanguageCode>
-```
-
-Replace `<LanguageCode>` with the appropriate ISO language code (e.g., 'fr' for French, 'es' for Spanish).
-
-## Limitations
-
-- The bot has a configurable limit on the number of questions a user can ask within 24 hours.
-- Some commands are restricted to users with specific roles.
-- The bot can only be configured for a maximum of two forum channels per server.
-
-## Support
-
-If you encounter any issues or have questions about the bot, please contact the bot owner or use the `/suggestion` command to provide feedback.
-
-## Contributing
-
-We welcome suggestions for improvements! Use the `/suggestion` command in Discord to submit your ideas.
-
-
-## Creator
-
-Made by Sam (techcodes27)
-
-
-## License
-
-GNU GENERAL PUBLIC LICENSE
-
----
-
-Thank you for using the Apple Support AI Bot! We hope it enhances your Discord community's support experience.
+## Note
+This bot is designed to assist with Apple-related queries but should not be considered an official Apple support channel. For official support, please visit [Apple Support](https://support.apple.com).
