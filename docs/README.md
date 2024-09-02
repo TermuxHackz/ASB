@@ -82,7 +82,7 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 
 ## Upgrade System
 - Servers can upgrade to increase their question limit and access premium features.
-- The upgrade costs $10.00 and provides:
+- The upgrade costs $30.00 (due to maintenance) and provides:
   1. Increased question limit (10-20 questions per user per day).
   2. Ability to change AI models.
   3. Unlimited use of the reset_all_limits command.
