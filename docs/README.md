@@ -108,7 +108,7 @@ The bot requires specific roles to be set up in your Discord server for proper f
 - Support roles don't need special permissions, but users with these roles should be knowledgeable about Apple products and services.
 
 ## Installation and Setup
-1. Invite the bot to your server using the provided OAuth2 link.
+1. Invite the bot to your server using the provided [OAuth2 link](https://discord.com/oauth2/authorize?client_id=1279505556347949147).
 2. Use `/configure_forum` to set up the support forums.
 3. Use `/setgeneralchannel` to set the announcement channel.
 4. Create and assign the necessary roles as described above.
