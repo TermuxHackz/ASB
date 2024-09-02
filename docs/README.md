@@ -10,13 +10,14 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 
 ## Features
 
-### 1. Apple Support Q&A
-- Users can ask questions about Apple products and services in designated forum channels.
-- The bot uses advanced AI models to generate helpful and accurate responses.
-- Daily question limits are enforced to prevent abuse.
+### 1. AI-Powered Support
+- Responds to Apple-related questions in designated forum channels.
+- Uses advanced AI models to generate helpful and accurate responses.
+- Supports multiple AI models: Claude, LLaMA, and Gemini.
+- Maintains conversation context for follow-up questions.
 
 ### 2. Multi-Language Support
-- The bot can translate responses to various languages set for individual users.
+- Can translate responses to various languages set for individual users.
 
 ### 3. Configurable Forums
 - Admins can configure up to two forum channels for Apple support.
@@ -28,15 +29,14 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 
 ### 5. Question Limits
 - Default free limit of 5 questions per user per day.
-- Upgradable limit for premium servers.
+- Upgradable limit for premium servers (10-20 questions per day).
 
 ### 6. Server Upgrades
 - Paid upgrades to increase question limits and access premium features.
 - Stripe integration for secure payments.
 
-### 7. Multiple AI Models
-- Access to various AI models including Claude, LLaMA, and Gemini.
-- Model selection available for upgraded servers.
+### 7. Model Selection
+- Premium servers can choose between different AI models for responses.
 
 ### 8. Feedback System
 - Users can submit suggestions and feedback to the bot owner.
@@ -49,6 +49,9 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 
 ### 10. Monitoring
 - Uptime tracking and status checking.
+
+### 11. Human Escalation
+- Option to escalate queries to human specialists when needed.
 
 ## Commands
 
@@ -76,14 +79,44 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
 - `/choose_model`: Select the AI model for the bot to use.
 - `/upgrade_limit [new_limit]`: Upgrade the server's question limit (10-20).
 
-## Required Roles
-- Most admin commands require one of the following roles: "Senior Mod, Manager, Admin, or Server Owner." (case sensitive)
-- The `/apple_support` command is restricted to users with Senior Mod or higher roles.
-- **PLEASE MAKE SURE THE TEAM MANAGING YOUR SERVER HAS THESE ROLES< IF YOU DONT< KINDLY CREATE THEM AND ALSO A GENIUS BAR SPECIALIST ROLE AND GENIUS BAR MASTER ROLE THAT WOULD ASSIT HUMANLY.**
+## Required Roles and Setup
+
+### Important: Necessary Roles
+The bot requires specific roles to be set up in your Discord server for proper functionality:
+
+1. **Administrative Roles**: 
+   - Senior Mod
+   - Manager
+   - Admin
+   - Server Owner
+   
+   These roles are required for using administrative commands and managing the bot's configuration.
+
+2. **Support Roles**:
+   - Genius Bar Specialist
+   - Genius Bar Master
+   
+   These roles are crucial for the human escalation feature. When the bot cannot resolve an issue, it will mention these roles to request human assistance.
+
+### Setting Up Roles
+1. Create these roles in your Discord server if they don't already exist.
+2. Assign the appropriate roles to your moderation team and support staff.
+3. Ensure that people with the "Genius Bar Specialist" and "Genius Bar Master" roles are available to assist when the bot escalates issues.
+
+### Role Permissions
+- Administrative roles should have permissions to manage channels, roles, and server settings.
+- Support roles don't need special permissions, but users with these roles should be knowledgeable about Apple products and services.
+
+## Installation and Setup
+1. Invite the bot to your server using the provided OAuth2 link.
+2. Use `/configure_forum` to set up the support forums.
+3. Use `/setgeneralchannel` to set the announcement channel.
+4. Create and assign the necessary roles as described above.
+5. Optionally, upgrade your server using `/upgrade_limit` for premium features.
 
 ## Upgrade System
 - Servers can upgrade to increase their question limit and access premium features.
-- The upgrade costs $30.00 (due to maintenance) and provides:
+- The upgrade costs $30.00 and provides:
   1. Increased question limit (10-20 questions per user per day).
   2. Ability to change AI models.
   3. Unlimited use of the reset_all_limits command.
@@ -95,12 +128,6 @@ The Apple Support AI Bot is a sophisticated Discord bot designed to provide high
   - Claude 3 Opus
   - LLaMA 3 Sonar Large
   - Google's Gemini
-
-## Installation and Setup
-1. Invite the bot to your server using the provided OAuth2 link.
-2. Use `/configure_forum` to set up the support forums.
-3. Use `/setgeneralchannel` to set the announcement channel.
-4. Optionally, upgrade your server using `/upgrade_limit` for premium features.
 
 ## Note
 This bot is designed to assist with Apple-related queries but should not be considered an official Apple support channel. For official support, please visit [Apple Support](https://support.apple.com).
