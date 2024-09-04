@@ -89,6 +89,7 @@ The bot requires specific roles to be set up in your Discord server for proper f
    - Manager
    - Admin
    - Server Owner
+   - Moderator
    
    These roles are required for using administrative commands and managing the bot's configuration.
 
